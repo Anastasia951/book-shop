@@ -39,6 +39,12 @@ ul {
   @media (max-width: $laptop) {
     padding: 0.7rem 1.7rem;
   }
+  @media (max-width: $tablet) {
+    padding: 0.5rem 1rem;
+  }
+  @media (max-width: $mobile) {
+    font-size: 0.4rem;
+  }
 }
 .button--outlined {
   background-color: inherit;
