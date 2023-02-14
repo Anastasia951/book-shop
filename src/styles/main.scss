@@ -1,3 +1,46 @@
+@import 'variables';
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 body {
-  color: red;
+  font-family: 'Cardo';
+  font-size: 16px;
+  line-height: 1;
+}
+
+.container {
+  max-width: 1370px;
+  padding: 0 10px;
+  width: 100%;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+  font: inherit;
+}
+button {
+  border: none;
+  background-color: inherit;
+  font: inherit;
+  cursor: pointer;
+}
+ul {
+  list-style: none;
+}
+
+.button--primary {
+  background-color: $info;
+}
+.button {
+  padding: 1rem 3rem;
+  @media (max-width: $laptop) {
+    padding: 0.7rem 1.7rem;
+  }
+}
+.button--outlined {
+  background-color: inherit;
+  border: 2px solid $info;
 }
