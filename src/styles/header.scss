@@ -2,29 +2,32 @@
 .header {
   background-color: $primary;
   padding: 2rem 0;
+  @media (max-width: $mobile) {
+    padding: 1rem 0;
+  }
   .container {
-    // display: flex;
-    // align-items: center;
-    // justify-content: space-between;
     display: grid;
     gap: 2rem;
-    grid-template-columns: repeat(5, minmax(fit-content, 1fr));
+    grid-template-columns: 105px 150px 0.3fr 1fr 280px;
     align-items: center;
     justify-content: space-between;
     grid-template-areas: 'logo social . list buy';
     grid-template-rows: 1fr;
+    @media (max-width: $laptop) {
+      grid-template-columns: 30px 120px 0.1fr 1fr 240px;
+    }
     @media (max-width: $tablet) {
-      grid-template-columns: 1fr 1fr;
+      grid-template-columns: auto 0.2fr 1fr;
       grid-template-rows: 1fr 1fr;
-      grid-template-areas: 'logo list' 'social buy';
+      grid-template-areas: 'logo . list' 'social . buy';
     }
     @media (max-width: $mobile) {
       grid-template-columns: 1fr 1fr;
+      gap: 1rem;
       grid-template-areas: 'logo burger' 'social buy';
     }
   }
   &__logo {
-    grid-column: 1 span 2;
     display: flex;
     gap: 4px;
     grid-area: logo;
@@ -41,19 +44,12 @@
       display: block;
     }
   }
-  // &__info {
-  //   display: flex;
-  //   gap: calc(40rem / 16);
-  //   align-items: center;
-  //   @media (max-width: $tablet) {
-  //     flex-direction: column;
-  //     gap: 1rem;
-  //   }
-  // }
   &__social {
     grid-area: social;
     display: flex;
-    gap: calc(10rem / 16);
+    justify-content: space-between;
+    justify-self: flex-start;
+    gap: 1rem;
     &--item {
       display: flex;
       justify-content: center;
@@ -67,15 +63,10 @@
       }
     }
   }
-  &__menu {
-    display: flex;
-    align-items: center;
-    gap: calc(50rem / 16);
+
+  .menu {
     @media (max-width: $laptop) {
-      gap: calc(20rem / 16);
-    }
-    @media (max-width: $tablet) {
-      flex-direction: column;
+      gap: calc(22rem / 16);
     }
     li {
       transition: color 0.4s ease;
@@ -83,34 +74,41 @@
         color: $info;
       }
     }
-  }
-
-  .menu {
     &__button {
       color: $primary;
+      flex: 1 1 auto;
       font-size: calc(19rem / 16);
       line-height: 1.5;
       letter-spacing: 0.57px;
       text-transform: capitalize;
     }
-    &__list {
-      grid-area: list;
-      display: flex;
-      align-items: center;
-      gap: 1rem;
-      font-family: 'Arial';
-      color: white;
-      @media (max-width: $mobile) {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100vw;
-        height: 100vh;
-        background-color: $info;
-        transform: translateY(-100vh);
-        transition: transform 0.4s ease;
-        &.visible {
-          transform: translateY(0);
+    grid-area: list;
+    display: flex;
+    align-items: center;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 1rem;
+    font-family: 'Arial';
+    color: white;
+    @media (max-width: $mobile) {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      flex-direction: column;
+      justify-content: center;
+      background-color: $primary;
+      transform: translateY(-100vh);
+      transition: transform 0.4s ease;
+      font-size: 2rem;
+      &.visible {
+        transform: translateY(0);
+      }
+      li {
+        &:not(:last-child) {
+          margin-bottom: 5rem;
         }
       }
     }
@@ -125,12 +123,13 @@
 
 .burger {
   grid-area: burger;
+  align-self: center;
+  justify-self: flex-end;
   position: relative;
   z-index: 999;
   display: none;
   width: 30px;
   height: 20px;
-  align-self: flex-end;
   position: relative;
   span,
   &::before,
