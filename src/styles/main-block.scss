@@ -1,0 +1,80 @@
+@import 'variables';
+
+.main {
+  background-color: $primary;
+  color: #fff;
+  padding: calc(100rem / 16) 0;
+  .container {
+    display: grid;
+    align-items: center;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    gap: 2rem;
+  }
+  &__text {
+  }
+  &__image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    img {
+      width: 100%;
+    }
+  }
+  &__upper {
+    font-weight: 400;
+    font-size: calc(21rem / 16);
+    margin-bottom: 10px;
+    line-height: 1.71;
+    letter-spacing: 1.2px;
+    text-transform: capitalize;
+  }
+  &__title {
+    margin-top: 0;
+    font-size: 4rem;
+    line-height: 1.22;
+    letter-spacing: 1.3px;
+    text-transform: capitalize;
+  }
+  &__description {
+    font-family: 'Arial';
+    font-style: normal;
+    font-weight: 400;
+    font-size: calc(18rem / 19);
+    line-height: 1.58;
+    color: $light;
+    margin-bottom: calc(42rem / 19);
+  }
+  &__props {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+  &__actions {
+    margin-bottom: calc(47rem / 19);
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    & > * {
+      flex: 0 0 50%;
+    }
+  }
+  &__item {
+    h5 {
+      font-weight: 400;
+      font-size: 24px;
+      line-height: 1.2;
+      letter-spacing: 0.48px;
+      color: #ffffff;
+    }
+    p {
+      font-family: 'Arial';
+      font-size: calc(17rem / 19);
+      line-height: 1.58;
+      color: $light;
+    }
+  }
+}

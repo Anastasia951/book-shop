@@ -7,7 +7,7 @@
 }
 body {
   font-family: 'Cardo';
-  font-size: 16px;
+  font-size: 19px;
   line-height: 1;
 }
 
@@ -32,22 +32,68 @@ ul {
   list-style: none;
 }
 
-.button--primary {
-  background-color: $info;
-}
 .button {
-  padding: 1rem 10px;
+  letter-spacing: 0.38px;
+  padding: 1rem;
+  max-width: 222px;
+  text-transform: capitalize;
   @media (max-width: $laptop) {
-    padding: 0.7rem 1.7rem;
-  }
-  @media (max-width: $tablet) {
-    padding: 0.5rem 1rem;
+    line-height: 1.6;
   }
   @media (max-width: $mobile) {
     font-size: 0.4rem;
   }
+  &--outlined {
+    background-color: inherit;
+    border: 2px solid $info;
+  }
+  &--underlined {
+    text-decoration: underline;
+    color: #ffffff;
+  }
+  &--primary {
+    background-color: $info;
+  }
 }
-.button--outlined {
-  background-color: inherit;
-  border: 2px solid $info;
+
+.title {
+  font-weight: 400;
+  text-transform: capitalize;
+  color: $primary;
+  line-height: 1.2;
+  &--h1 {
+    font-size: calc(64rem / 19);
+    letter-spacing: 1.3px;
+  }
+  &--h2 {
+    font-size: calc(42rem / 19);
+  }
+  &--h3 {
+    font-size: calc(32rem / 19);
+    letter-spacing: 0.32px;
+  }
+  &--h4 {
+    font-size: calc(24rem / 19);
+  }
+  &--light {
+    color: #fff;
+  }
+  &--dark {
+    color: $primary;
+  }
+}
+
+.marker {
+  position: relative;
+  padding-left: 15px;
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0.5em;
+    left: 0;
+    width: 10px;
+    height: 10px;
+    background-color: $info;
+    border-radius: 50%;
+  }
 }
