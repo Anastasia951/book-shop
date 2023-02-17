@@ -90,7 +90,29 @@ ul {
     color: $primary;
   }
 }
-
+.image--border {
+  position: relative;
+  margin-right: 5%;
+  @media (max-width: $tablet) {
+    &::after {
+      display: none;
+    }
+  }
+  &::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    padding-bottom: 116%;
+    left: 5%;
+    top: 5%;
+    z-index: 1;
+    border: 10px solid $info;
+  }
+  img {
+    z-index: 2;
+    position: relative;
+  }
+}
 .marker {
   position: relative;
   padding-left: 15px;
