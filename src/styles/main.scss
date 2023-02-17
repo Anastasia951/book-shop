@@ -94,6 +94,7 @@ ul {
   position: relative;
   margin-right: 5%;
   @media (max-width: $tablet) {
+    margin-right: 0;
     &::after {
       display: none;
     }

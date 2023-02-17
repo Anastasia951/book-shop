@@ -40,6 +40,9 @@
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: 1fr;
     margin-bottom: calc(54rem / 19);
+    @media (max-width: $tablet) {
+      grid-template-columns: 1fr;
+    }
   }
   &__stat {
     text-align: left;
@@ -53,6 +56,10 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
+    @media (max-width: $tablet) {
+      align-items: center;
+      border: none;
+    }
     b {
       font-size: calc(54rem / 19);
       line-height: 1.43;
@@ -69,6 +76,13 @@
     padding: calc(15rem / 19);
     display: flex;
     gap: calc(40rem / 19);
+    img {
+      max-width: 130px;
+    }
+    @media (max-width: $tablet) {
+      flex-direction: column;
+      align-items: center;
+    }
   }
   &__data {
     color: #fff;
