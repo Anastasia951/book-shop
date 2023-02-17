@@ -9,6 +9,9 @@ body {
   font-family: 'Cardo';
   font-size: 19px;
   line-height: 1;
+  &.lock {
+    overflow: hidden;
+  }
 }
 
 .container {
@@ -37,12 +40,6 @@ ul {
   padding: 1rem;
   max-width: 222px;
   text-transform: capitalize;
-  @media (max-width: $laptop) {
-    line-height: 1.6;
-  }
-  @media (max-width: $mobile) {
-    font-size: 0.4rem;
-  }
   &--outlined {
     background-color: inherit;
     border: 2px solid $info;
