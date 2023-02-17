@@ -64,6 +64,17 @@ ul {
   }
   &--h2 {
     font-size: calc(42rem / 19);
+    position: relative;
+    &::after {
+      content: '';
+      position: absolute;
+      height: 3px;
+      width: 50px;
+      bottom: -20px;
+      left: 50%;
+      transform: translate(-50%);
+      background-color: $info;
+    }
   }
   &--h3 {
     font-size: calc(32rem / 19);
@@ -87,6 +98,7 @@ ul {
     content: '';
     position: absolute;
     top: 0.5em;
+    transform: translateY(-50%);
     left: 0;
     width: 10px;
     height: 10px;

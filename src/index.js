@@ -2,6 +2,7 @@ import 'normalize.css'
 import './styles/main.scss'
 import './styles/header.scss'
 import './styles/main-block.scss'
+import './styles/books.scss'
 
 
 function clickHandler() {
