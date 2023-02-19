@@ -2,6 +2,9 @@
 
 .trusted {
   padding: 126px 0;
+  @media (max-width: $mobile) {
+    padding: 75px 0;
+  }
   &__title {
     margin-bottom: calc(76rem / 19);
     text-align: center;

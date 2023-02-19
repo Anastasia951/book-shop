@@ -4,6 +4,9 @@
   background-color: $primary;
   color: #fff;
   padding: 70px 0;
+  @media (max-width: $mobile) {
+    padding: 35px 0;
+  }
   .container {
     display: flex;
     gap: 1rem;

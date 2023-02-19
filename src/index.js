@@ -6,6 +6,7 @@ import './styles/books.scss'
 import './styles/author.scss'
 import './styles/trusted.scss'
 import './styles/get-book.scss'
+import './styles/learn.scss'
 
 function clickHandler() {
   list.classList.toggle('visible')

@@ -92,7 +92,7 @@ ul {
 }
 .image--border {
   position: relative;
-  margin-right: 5%;
+  margin-right: 30px;
   @media (max-width: $tablet) {
     margin-right: 0;
     &::after {
@@ -104,8 +104,8 @@ ul {
     position: absolute;
     width: 100%;
     padding-bottom: 116%;
-    left: 5%;
-    top: 5%;
+    left: 15px;
+    top: 15px;
     z-index: 1;
     border: 10px solid $info;
   }
