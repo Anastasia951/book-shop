@@ -5,6 +5,7 @@ import './styles/main-block.scss'
 import './styles/books.scss'
 import './styles/author.scss'
 import './styles/trusted.scss'
+import './styles/get-book.scss'
 
 function clickHandler() {
   list.classList.toggle('visible')
@@ -14,5 +15,6 @@ function clickHandler() {
 
 const list = document.querySelector("[data-list]")
 const burger = document.querySelector("[data-burger]")
+
 
 burger.addEventListener('click', clickHandler)

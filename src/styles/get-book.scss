@@ -1,0 +1,36 @@
+@import 'variables.scss';
+
+.get {
+  background-color: $primary;
+  color: #fff;
+  padding: 70px 0;
+  .container {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    @media (max-width: $tablet) {
+      flex-direction: column;
+    }
+  }
+  &__image {
+    flex: 0 0 50%;
+    img {
+      width: 100%;
+    }
+  }
+  &__button {
+    color: #fff;
+  }
+  &__title {
+    margin-bottom: calc(54rem / 19);
+    &::after {
+      left: 0;
+      transform: none;
+    }
+  }
+  &__description {
+    color: $blue;
+    line-height: 1.5;
+    margin-bottom: calc(27rem / 19);
+  }
+}
