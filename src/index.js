@@ -4,6 +4,7 @@ import './styles/header.scss'
 import './styles/main-block.scss'
 import './styles/books.scss'
 import './styles/author.scss'
+import './styles/trusted.scss'
 
 function clickHandler() {
   list.classList.toggle('visible')

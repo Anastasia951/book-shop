@@ -1,0 +1,38 @@
+@import 'variables.scss';
+
+.trusted {
+  padding: 126px 0;
+  &__title {
+    margin-bottom: calc(76rem / 19);
+    text-align: center;
+  }
+  &__items {
+    display: grid;
+    gap: calc(47rem / 19);
+    grid-template-columns: repeat(4, 1fr);
+    @media (max-width: $tablet) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    @media (max-width: $mobile) {
+      grid-template-columns: 1fr;
+    }
+  }
+  &__item {
+    text-align: center;
+  }
+  &__description {
+    color: $gray;
+    font-family: 'Arial';
+  }
+  &__company {
+    margin-bottom: 1rem;
+  }
+  &__image {
+    max-width: 189px;
+    margin: 0 auto 1rem auto;
+
+    img {
+      width: 100%;
+    }
+  }
+}

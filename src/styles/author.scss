@@ -40,12 +40,12 @@
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: 1fr;
     margin-bottom: calc(54rem / 19);
-    @media (max-width: $tablet) {
+    @media (max-width: $mobile) {
       grid-template-columns: 1fr;
     }
   }
   &__stat {
-    text-align: left;
+    text-align: center;
     flex: 0 0 33%;
     &:last-child {
       border-right: none;
