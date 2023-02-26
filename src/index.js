@@ -8,6 +8,7 @@ import './styles/trusted.scss'
 import './styles/get-book.scss'
 import './styles/learn.scss'
 import './styles/knowledge.scss'
+import './styles/rating.scss'
 
 function clickHandler() {
   list.classList.toggle('visible')
